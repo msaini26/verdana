@@ -63,6 +63,8 @@ input {
     border: none;
     font-weight: bold;
     background-color: #099dfd;
+    display: flex;
+    justify-content: center;
 }
 
 #submitBtn:hover {
@@ -85,13 +87,7 @@ input {
 .illustration-img-container {
     width: 400px;
     height: 400px;
-    display: flex;
-
-    
-}
-
-#illustration {
-
+    display: flex;    
 }
 
 /* tagline styling */
