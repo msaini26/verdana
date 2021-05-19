@@ -96,3 +96,15 @@ input {
     font-size: 23px;
     color: white;
 }
+
+/* called when information is incorrect */
+.incorrect {
+    border: 2px solid red;
+}
+
+/* called when not right credentials */
+.warning {
+    font-size: 15px;
+    color: red;
+    display: none;
+}

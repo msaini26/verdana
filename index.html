@@ -19,9 +19,14 @@
         </div>
         <div class="form-container">
             <span>Login and enjoy <span style="color: #099dfd;">unlimited</span> video calling</span>
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button id="submitBtn">Submit</button>
+            <form action="index.html" onsubmit="return clicky()">
+                <input type="text" id="email" placeholder="Email">
+                <span class="warning" id="emailWarning">Incorrect email</span>
+                <input type="password" id="password" placeholder="Password">
+                <span class="warning" id="passwordWarning">Password must be at least 8 characters</span>
+                <button id="submitBtn">Submit</button>
+
+            </form>
         </div>
     </div>
     <div class="right-pane">
@@ -38,7 +43,46 @@
 
 
 
-    <script src="" async defer></script>
+    <script src="learn.js" async defer></script>
+
+    <script>
+        function clicky() {
+            let email = document.getElementById('email').value
+            let password = document.getElementById('password').value
+
+            if (email.match(/\S*@\S+/)) {
+                document.getElementById('email').className = ''
+                document.getElementById('emailWarning').style = ''
+                if (password.length >= 8) {
+                    document.getElementById('password').className = ''
+                    document.getElementById('passwordWarning').style = ''
+                    return true
+                }
+                else {
+                    document.getElementById('password').className = 'incorrect'
+                    document.getElementById('passwordWarning').style = 'display: block'
+                    return false
+                }
+            }
+            else {
+                document.getElementById('email').className = 'incorrect'
+                document.getElementById('emailWarning').style = 'display: block'
+                if (password.length >= 8) {
+                    document.getElementById('password').className = ''
+                    document.getElementById('passwordWarning').style = ''
+
+                }
+                else {
+                    document.getElementById('password').className = 'incorrect'
+                    document.getElementById('passwordWarning').style = 'display: block'
+                    return false
+                }
+
+                return false
+            }
+            return false
+        }
+    </script>
 </body>
 
 </html>
