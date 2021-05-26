@@ -1,110 +1,164 @@
 /* left panel login */
 .left-pane {
-    background-color: white;
-    float: left;
-    width: 25vw;
-    height: 100vh;
-    padding-left: 10px;
-    padding-right: 10px;
+  background-color: white;
+  float: left;
+  width: 25vw;
+  height: 100vh;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* right panel login */
 .right-pane {
-    background-color: #099dfd;
-    height: 100vh;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  background-color: #099dfd;
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* right pane video call */
+.right-pane2 {
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* logo img */
 img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /* surrounds logo image (container) */
 .img-container {
-    width: 240px;
-    /* margin top, left, bottom, right */
-    margin: 60px auto 0 auto;
+  width: 240px;
+  /* margin top, left, bottom, right */
+  margin: 60px auto 0 auto;
 }
 
 /* login styling */
 body {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
 }
 
 /* login form header */
-.form-container{
-    font-size: 23px;
-    margin-top: 100px;
+.form-container {
+  font-size: 23px;
+  margin-top: 100px;
 }
 
 input {
-    margin-top: 20px;
-    border: 1.5px solid #099dfd;
-    width: 60%;
-    font-size: 16px;
-    border-radius: 20px;
-    padding-right: 5px;
-    padding-left: 5px;
+  margin-top: 20px;
+  border: 1.5px solid #099dfd;
+  width: 60%;
+  font-size: 16px;
+  border-radius: 20px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
-#submitBtn {
-    margin-top: 20px;
-    font-size: 17px;
-    padding: 5px;
-    padding-inline: 20px;
-    border-radius: 5px;
-    color:white;
-    border: none;
-    font-weight: bold;
-    background-color: #099dfd;
-    display: flex;
-    justify-content: center;
+.submitBtn {
+  margin-top: 20px;
+  font-size: 17px;
+  padding: 5px;
+  padding-inline: 20px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  font-weight: bold;
+  background-color: #099dfd;
+  display: flex;
+  justify-content: center;
 }
 
-#submitBtn:hover {
-    background-color: #59bdff;
+.submitBtn:hover {
+  background-color: #59bdff;
 }
 
 /* right graphic styling */
 .illustration-container {
-    margin-top: 200px;
-    background-color: #ffffff59;
-    width: 600px;
-    height: 600px;
-    border-radius: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: 200px;
+  background-color: #ffffff59;
+  width: 600px;
+  height: 600px;
+  border-radius: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* right illustration img */
 .illustration-img-container {
-    width: 400px;
-    height: 400px;
-    display: flex;    
+  width: 400px;
+  height: 400px;
+  display: flex;
 }
 
 /* tagline styling */
 #tag {
-    margin-top: 200px;
-    font-size: 23px;
-    color: white;
+  margin-top: 200px;
+  font-size: 23px;
+  color: white;
 }
 
 /* called when information is incorrect */
 .incorrect {
-    border: 2px solid red;
+  border: 2px solid red;
 }
 
 /* called when not right credentials */
 .warning {
-    font-size: 15px;
-    color: red;
-    display: none;
+  font-size: 15px;
+  color: red;
+  display: none;
+}
+
+.right-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+/* self video box styling */
+#SelfStream {
+  margin-top: 150px;
+  justify-self: center;
+  border: 2px solid #099dfd;
+  width: 800px;
+  height: 500px;
+}
+
+/* remote user video box styling */
+#remoteStream {
+  text-align: left;
+  margin-top: 20px;
+  justify-self: center;
+  border: 2px solid #099dfd;
+  width: 400px;
+  height: 250px;
+}
+
+/* icon styling */
+.icon {
+  background-color: #099dfd; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+.icon:hover {
+  background-color: #59bdff;
 }
