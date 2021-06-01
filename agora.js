@@ -98,9 +98,9 @@ document.getElementById("audio-mute").onclick = function () {
 
 function endCall() {
   document.getElementById("phone").onclick;
-  window.location = "index.html";
   client.leave(function () {
     console.log("User left!");
   }, handlefail);
   removeMyVideoStream();
+  window.location = "index.html";
 }
