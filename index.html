@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Verdana</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/favicon.png" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
@@ -21,11 +22,33 @@
             <span>Login and enjoy <strong><span style="color: #91c406;">unlimited</span></strong> telehealth video
                 calling</span>
             <form action="index.html" onsubmit="return clicky()">
-                <input type="text" id="email" placeholder="Email">
-                <span class="warning" id="emailWarning">Incorrect email</span>
-                <input type="password" id="password" placeholder="Password">
+                <div class="inputs">
+                    <!-- Email input -->
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Email</h5>
+                            <input id="email" type="text" class="input">
+                        </div>
+                    </div>
+                    <span class="warning" id="emailWarning">Incorrect email</span>
+                    <!-- end email input -->
+                    <!-- password input -->
+                    <div class="input-div pass">
+                        <div class="i">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Password</h5>
+                            <input id="password" type="password" class="input">
+                        </div>
+                    </div>
+                </div>
                 <span class="warning" id="passwordWarning">Password must be at least 8 characters</span>
-                <button class="submitBtn">Submit</button>
+                <!-- end password input -->
+                <button class="submitBtn" id="login">Submit</button>
 
             </form>
         </div>
@@ -35,21 +58,18 @@
             <div class="illustration-img-container">
                 <img id="illustration" src="assets/chat2.svg">
             </div>
-
         </div>
         <div id="tag">
             <span>Instantly connect with <strong>healthcare providers</strong> no matter how far you are</span>
         </div>
-        
     </div>
     <div id="footer">&copy; All rights reserved. Made by Mansi</div>
-    
 
-
-
-    <script src="learn.js" async defer></script>
-
+    <!-- load js files -->
+    <script src="js/learn.js" async defer></script>
+    <script src="js/script.js" async defer></script>
     <script>
+        // email and password warnings
         function clicky() {
             let email = document.getElementById('email').value
             let password = document.getElementById('password').value

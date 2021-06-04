@@ -17,17 +17,17 @@
     <div class="flexContainer">
         <div class="left-pane">
             <div class="logoSmall">
-                <img class="logoElement" src="assets/agoraLogo.png">
+                <a href="index.html"><img class="logoElement" src="assets/verdana.png"></a>
             </div>
-            <span class="headingText">Join a Call!</span><br>
+            <strong><span class="headingText">Join a Call!</span></strong><br>
             <input type="text" id="username" placeholder="Username">
             <input type="text" id="channelName" placeholder="Channel Name">
             <button class="submitBtn" id="join">Join</button>
         </div>
         <div class="right-pane2">
-            <div id="SelfStream"></div>
-            <p>Your healthcare provider will be here shortly. Thank you for your patience!</p>
             <div id="remoteStream"></div>
+            <p>Your healthcare provider will be here shortly. Thank you for your patience!</p>
+            <div id="SelfStream"></div>
             <p>You</p>
             <div class="controls">
 
@@ -46,7 +46,6 @@
         </div>
     </div>
     <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.0.0.js"></script>
-    <script src="agora.js" async defer></script>
+    <script src="js/agora.js" async defer></script>
 </body>
-
 </html>

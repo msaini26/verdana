@@ -62,12 +62,13 @@ document.getElementById("join").onclick = function () {
   client.on("stream-subscribed", function (evt) {
     console.log("Subscribed Stream");
     let stream = evt.stream;
+    console.log(stream);
     addVideoStream(stream.getId());
     stream.play(stream.getId());
   });
 
   client.on("peer-leave", function (evt) {
-    console.log("Peer has left");
+    console.log("Your peer has left the meeting");
     removeVideoStream(evt);
   });
 };
@@ -80,7 +81,7 @@ document.getElementById("video-mute").onclick = function () {
   } else {
     globalStream.unmuteVideo();
     isVideoMuted = false;
-    document.getElementById("video-mute").style.background = "#099dfd";
+    document.getElementById("video-mute").style.background = "#8ba14d";
   }
 };
 
@@ -92,7 +93,7 @@ document.getElementById("audio-mute").onclick = function () {
   } else {
     globalStream.unmuteAudio();
     isAudioMuted = false;
-    document.getElementById("audio-mute").style.background = "#099dfd";
+    document.getElementById("audio-mute").style.background = "#8ba14d";
   }
 };
 

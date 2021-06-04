@@ -1,3 +1,7 @@
+.inputs {
+  padding: 5%;
+}
+
 /* left panel login */
 .left-pane {
   background-color: white;
@@ -50,6 +54,7 @@ body {
 .form-container {
   font-size: 23px;
   margin-top: 100px;
+  padding: 10%;
 }
 
 input {
@@ -131,8 +136,8 @@ input {
   flex-direction: row;
 }
 
-/* self video box styling */
-#SelfStream {
+/* remote user video box styling */
+#remoteStream {
   margin-top: 150px;
   justify-self: center;
   border: 2px solid #8ba14d;
@@ -140,7 +145,7 @@ input {
   height: 500px;
 }
 
-/* remote user video box styling */
+/* self video box styling */
 #remoteStream {
   text-align: left;
   margin-top: 20px;
@@ -177,7 +182,122 @@ input {
   width: 100%;
   height: 5%;
   display: flex;
-  align-items: center;  
+  align-items: center;
   justify-content: center;
   color: white;
 }
+
+.input-div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 7% 93%;
+  margin: 25px 0;
+  padding: 5px 0;
+  border-bottom: 2px solid #d9d9d9;
+}
+.input-div.one {
+  margin-top: 0;
+}
+.i {
+  color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.i i {
+  transition: 0.3s;
+}
+.input-div > div {
+  position: relative;
+  height: 45px;
+}
+.input-div > div > h5 {
+  position: absolute;
+  left: 10px;
+  top: -5%;
+  transform: translateY(-68%);
+  color: #999;
+  font-size: 18px;
+  transition: 0.3s;
+  font-family: "Montserrat", sans-serif;
+}
+.input-div:before,
+.input-div:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: #cdcddf;
+  transition: 0.4s;
+}
+.input-div:before {
+  right: 50%;
+}
+.input-div:after {
+  left: 50%;
+}
+.input-div.focus:before,
+.input-div.focus:after {
+  width: 50%;
+}
+.input-div.focus > div > h5 {
+  top: -5px;
+  font-size: 15px;
+}
+.input-div.focus > .i > i {
+  color: #cdcddf;
+}
+.input-div > div > input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.2 rem;
+  color: #555;
+  font-family: "Montserrat", sans-serif;
+}
+.input-div.pass {
+  margin-bottom: 4px;
+}
+
+/* login buttons */
+#login {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #93aa51, #bbd66b, #a6bf5a);
+  background-size: 200%;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: 0.5s;
+  text-align: center;
+}
+
+button:hover {
+  background-position: right;
+}
+
+#createAccount a,
+#login a {
+  text-align: center;
+  color: #fff;
+}
+
+#createAccount a:hover,
+#login a:hover {
+  text-align: center;
+  color: rgb(221, 36, 36);
+}
+/* end login button styling */
