@@ -146,7 +146,7 @@ input {
 }
 
 /* self video box styling */
-#remoteStream {
+#SelfStream {
   text-align: left;
   margin-top: 20px;
   justify-self: center;
